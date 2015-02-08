@@ -18,7 +18,7 @@ case "$DEVICE" in
             "$@"
         ;;
         
-    "perigrine")
+    "peregrine")
         sed -i \
             -e 's block/platform/msm_sdcc.1/by-name/modem mmcblk0p1 ' \
             -e 's block/platform/msm_sdcc.1/by-name/persist mmcblk0p29 ' \
