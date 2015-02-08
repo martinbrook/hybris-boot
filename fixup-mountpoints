@@ -17,8 +17,18 @@ case "$DEVICE" in
             -e 's block/platform/msm_sdcc.1/by-name/userdata mmcblk0p28 ' \
             "$@"
         ;;
+        
+    "perigrine")
+        sed -i \
+            -e 's block/platform/msm_sdcc.1/by-name/modem mmcblk0p1 ' \
+            -e 's block/platform/msm_sdcc.1/by-name/persist mmcblk0p29 ' \
+            -e 's block/platform/msm_sdcc.1/by-name/system mmcblk0p34 ' \
+            -e 's block/platform/msm_sdcc.1/by-name/userdata mmcblk0p36 ' \
+            "$@"
+        ;;
 
-    "mako")
+    "mako"
+    )
         sed -i \
             -e 's block/platform/msm_sdcc.1/by-name/modem mmcblk0p1 ' \
             -e 's block/platform/msm_sdcc.1/by-name/persist mmcblk0p20 ' \
